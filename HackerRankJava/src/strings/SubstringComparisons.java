@@ -9,14 +9,20 @@ import java.util.Scanner;
  * @author aysedemirel
  */
 public class SubstringComparisons {
-  public static String getSmallestAndLargest(String s, int k) {
-    String smallest = "";
-    String largest = "";
-
-    // Complete the function
-    // 'smallest' must be the lexicographically smallest substring of length 'k'
-    // 'largest' must be the lexicographically largest substring of length 'k'
-
+  public static String getSmallestAndLargest(String text, int seperatedIndex) {
+    int startIndex = 0;
+    String tempText = text.substring(startIndex, seperatedIndex);
+    String smallest = tempText;
+    String largest = tempText;
+    for (int i = seperatedIndex; i < text.length(); i++) {
+      tempText = tempText.substring(startIndex + 1, seperatedIndex) + text.charAt(i);
+      if (largest.compareTo(tempText) < 0) {
+        largest = tempText;
+      }
+      if (smallest.compareTo(tempText) > 0) {
+        smallest = tempText;
+      }
+    }
     return smallest + "\n" + largest;
   }
 

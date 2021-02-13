@@ -14,3 +14,24 @@ I found an explanation for the pattern: (https://stackoverflow.com/questions/521
 
 Eclipse has a problem with end-of-file. Normally, Ctrl-Z is ended line and you can control it with scanner.hasNextLine(). </br>
 But in Eclipse, before Ctrl-Z you should click anywhere except consol (I clicked editor) and click consol again, now you can end with Ctrl-Z. :)
+
+
+
+### Strings
+
+**Regex**
+
+- \d represents digits in regular expressions, same as [0-9]
+- \\d{1, 2} catches any one or two-digit number
+- (0|1) means zero or one
+- [0-5] means between 0 to 5
+- ^  tells the computer that the match must start at the beginning of the string or line.
+- $ tells the computer that the match must occur at the end of the string or before \n at the end of the line or string.
+- More: https://www.geeksforgeeks.org/write-regular-expressions/
+
+
+
+
+
+
+

@@ -11,7 +11,7 @@ import java.util.Scanner;
  * @author aysedemirel
  */
 class ValidUsername {
-  public static final String regularExpression = "^[a-zA-z]{1}[A-Za-z0-9_]{7,29}$";
+  public static final String regularExpression = "^[a-zA-Z][a-zA-Z0-9_]{7,29}$";
 }
 
 

@@ -178,7 +178,7 @@ Don't forget to give the project a star! Thanks again!
 ### Top contributors:
 
 <a href="https://github.com/aysedemirel/HackerRank-JavaChallenge/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=aysedemirel/README-Template" alt="contrib.rocks image" />
+  <img src="https://contrib.rocks/image?repo=aysedemirel/HackerRank-JavaChallenge" alt="contrib.rocks image" />
 </a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -210,10 +210,10 @@ Ayşe Demirel Deniz - [Linkedln - aysedemirel](https://www.linkedin.com/in/ayse-
 
 [english-shield]: https://img.shields.io/badge/English-En-blue?style=for-the-badge
 [turkish-shield]: https://img.shields.io/badge/Turkish-Tr-red?style=for-the-badge
-[contributors-shield]: https://img.shields.io/github/contributors/aysedemirel/README-Template.svg?style=for-the-badge
-[forks-shield]: https://img.shields.io/github/forks/aysedemirel/README-Template.svg?style=for-the-badge
-[stars-shield]: https://img.shields.io/github/stars/aysedemirel/README-Template.svg?style=for-the-badge
-[issues-shield]: https://img.shields.io/github/issues/aysedemirel/README-Template.svg?style=for-the-badge
-[license-shield]: https://img.shields.io/github/license/aysedemirel/README-Template.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/aysedemirel/HackerRank-JavaChallenge.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/aysedemirel/HackerRank-JavaChallenge.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/aysedemirel/HackerRank-JavaChallenge?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/aysedemirel/HackerRank-JavaChallenge.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/aysedemirel/HackerRank-JavaChallenge.svg?style=for-the-badge
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [Java-shield]: https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white

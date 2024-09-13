@@ -11,18 +11,28 @@ import java.util.Scanner;
  */
 public class StdinAndStdoutI {
 
-  private static final int LOOP_NUMBER = 3;
-  private static final Scanner scanner = new Scanner(System.in);
+  public static void main(String[] args) {
+   solutionOne();
+   // solutionTwo();
+  }
 
-  public StdinAndStdoutI() {
-    for (int i = 0; i < LOOP_NUMBER; i++) {
+  public static void solutionOne(){
+    Scanner scanner = new Scanner(System.in);
+    int a = scanner.nextInt();
+    int b = scanner.nextInt();
+    int c = scanner.nextInt();
+    System.out.println(a);
+    System.out.println(b);
+    System.out.println(c);
+    scanner.close();
+  }
+
+  public static void solutionTwo(){
+    Scanner scanner = new Scanner(System.in);
+    for (int i = 0; i < 3; i++) {
       int myInt = scanner.nextInt();
       System.out.println(myInt);
     }
     scanner.close();
-  }
-
-  public static void main(String[] args) {
-    new StdinAndStdoutI();
   }
 }

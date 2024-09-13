@@ -202,7 +202,7 @@ Ayşe Demirel Deniz - [Linkedln - aysedemirel](https://www.linkedin.com/in/ayse-
 [forks-url]: https://github.com/aysedemirel/HackerRank-JavaChallenge/network/members
 [stars-url]: https://github.com/aysedemirel/HackerRank-JavaChallenge/stargazers
 [issues-url]: https://github.com/aysedemirel/HackerRank-JavaChallenge/issues
-[license-url]: https://github.com/aysedemirel/HackerRank-JavaChallenge/blob/master/LICENSE.txt
+[license-url]: https://github.com/aysedemirel/HackerRank-JavaChallenge/blob/master/LICENSE
 [linkedin-url]: https://www.linkedin.com/in/ayse-demirel/
 [Java-url]: https://www.java.com/
 

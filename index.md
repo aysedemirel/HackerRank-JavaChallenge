@@ -51,6 +51,8 @@ I will present different solutions according to Worst, Average and Best Case ana
 Thus, we will be able to analyze the algorithm we created while solving the problem.
 While the codes of the problem solutions are here, you can find detailed explanations on my Medium account.
 
+https://aysedemirel.medium.com/hackerrank-java-challenge-0bce4a52707a
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With

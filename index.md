@@ -2,27 +2,11 @@
 
 <a id="readme-top"></a>
 
-<!-- PROJECT SHIELDS -->
-<div align="center">
-
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-</div>
 
 <!-- PROJECT LOGO/TITLE -->
-<br />
-<div align="center">
-  <a href="https://github.com/aysedemirel/HackerRank-JavaChallenge">
-    <img src="https://github.com/aysedemirel/HackerRank-JavaChallenge/blob/master/images/logo.png" alt="Logo" width="80" height="80">
-  </a>
 
-<h3 align="center">HackerRank-JavaChallenge</h3>
-  <p align="center">
+
+  <p >
     HackerRank Java Challenge Solutions
     <br />
     <br />
@@ -30,7 +14,7 @@
     ·
     <a href="https://github.com/aysedemirel/HackerRank-JavaChallenge/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
-</div>
+
 
 <!-- TABLE OF CONTENTS -->
 <details>

@@ -137,13 +137,13 @@ How to run the project:
 **About Scanner:** skip method is ignoring the pattern what you want. You want a String input, and
 don't want some characters, you can use skip method.
 The pattern is a regular expression. For more info about regular exp. and skip
-method : (https://www.geeksforgeeks.org/scanner-skip-method-in-java-with-examples/) (https://www.vogella.com/tutorials/JavaRegularExpressions/article.html)
+method : [https://www.geeksforgeeks.org/scanner-skip-method-in-java-with-examples/](https://www.geeksforgeeks.org/scanner-skip-method-in-java-with-examples/)
 
 **In JavaIfElse Challenge,** HackerRank gives you a start code for scanner. There is a skip method
 with a pattern to ignore. I didn't know the meaning the pattern exactly.
 Pattern is : "(\r\n|[\n\r\u2028\u2029\u0085])?"
 I found an explanation for the
-pattern: (https://stackoverflow.com/questions/52111077/explain-this-line-written-in-java)
+pattern: [https://stackoverflow.com/questions/52111077/explain-this-line-written-in-java](https://stackoverflow.com/questions/52111077/explain-this-line-written-in-java)
 
 Eclipse has a problem with end-of-file. Normally, Ctrl-Z is ended line, and you can control it with
 scanner.hasNextLine().
@@ -161,7 +161,8 @@ console again, now you can end with Ctrl-Z. :)
 - ^ tells the computer that the match must start at the beginning of the string or line.
 - $ tells the computer that the match must occur at the end of the string or before \n at the end of
   the line or string.
-- More: https://www.geeksforgeeks.org/write-regular-expressions/
+-
+More: [https://www.geeksforgeeks.org/write-regular-expressions/](https://www.geeksforgeeks.org/write-regular-expressions/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

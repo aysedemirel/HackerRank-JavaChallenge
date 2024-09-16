@@ -13,38 +13,52 @@ import java.util.Scanner;
  */
 public class JavaIfElse {
 
-  private static final Scanner scanner = new Scanner(System.in);
-
-  public JavaIfElse() {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
     int N = scanner.nextInt();
     scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+    // If number is invalid, enter another number
     while (isNumberValid(N)) {
       N = scanner.nextInt();
     }
-    if (isNumberOdd(N)) {
-      System.out.println("Weird");
-    } else {
-      // number is even
-      if (N >= 2 && N <= 5) {
-        System.out.println("Not Weird");
-      } else if (N >= 6 && N <= 20) {
-        System.out.println("Weird");
-      } else {
-        System.out.println("Not Weird");
-      }
-    }
+    solutionOne(N);
     scanner.close();
   }
 
-  public static void main(String[] args) {
-    new JavaIfElse();
-  }
-
-  private boolean isNumberValid(int number) {
+  private static boolean isNumberValid(int number) {
     return (number > 100 || number < 1);
   }
 
-  private boolean isNumberOdd(int number) {
+  public static void solutionOne(int N) {
+    if (N % 2 != 0) {
+      System.out.print("Weird");
+    } else if (N >= 2 && N <= 5) {
+      System.out.print("Not Weird");
+    } else if (N >= 6 && N <= 20) {
+      System.out.print("Weird");
+    } else {
+      System.out.print("Not Weird");
+    }
+  }
+
+  /**
+   * Alternative solution using separate method
+   */
+  public static void solutionTwo(int N) {
+    if (isNumberOdd(N)) {
+      System.out.print("Weird");
+    } else if (N >= 2 && N <= 5) {
+      System.out.print("Not Weird");
+    } else if (N >= 6 && N <= 20) {
+      System.out.print("Weird");
+    } else {
+      System.out.print("Not Weird");
+    }
+  }
+
+  private static boolean isNumberOdd(int number) {
     return number % 2 != 0;
   }
+
+
 }

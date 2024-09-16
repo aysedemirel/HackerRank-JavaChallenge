@@ -12,11 +12,11 @@ import java.util.Scanner;
 public class StdinAndStdoutI {
 
   public static void main(String[] args) {
-   solutionOne();
-   // solutionTwo();
+    solutionOne();
+    // solutionTwo();
   }
 
-  public static void solutionOne(){
+  public static void solutionOne() {
     Scanner scanner = new Scanner(System.in);
     int a = scanner.nextInt();
     int b = scanner.nextInt();
@@ -27,7 +27,10 @@ public class StdinAndStdoutI {
     scanner.close();
   }
 
-  public static void solutionTwo(){
+  /**
+   * Alternative solution using for loop
+   */
+  public static void solutionTwo() {
     Scanner scanner = new Scanner(System.in);
     for (int i = 0; i < 3; i++) {
       int myInt = scanner.nextInt();

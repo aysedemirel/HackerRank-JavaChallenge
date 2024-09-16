@@ -51,7 +51,7 @@ I will present different solutions according to Worst, Average and Best Case ana
 Thus, we will be able to analyze the algorithm we created while solving the problem.
 While the codes of the problem solutions are here, you can find detailed explanations on my Medium account.
 
-[Medium-HackerRank Solutions](https://aysedemirel.medium.com/hackerrank-java-challenge-0bce4a52707a)
+<a href="https://aysedemirel.medium.com/hackerrank-java-challenge-0bce4a52707a">Medium HackerRank Java Solutions</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -110,11 +110,11 @@ How to run the project:
 
 ### Introduction
 **About Scanner:** skip method is ignoring the pattern what you want. You want a String input, and don't want some characters, you can use skip method.
-The pattern is a regular expression. For more info about regular exp. and skip method : [https://www.vogella.com/tutorials/JavaRegularExpressions/article.html](https://www.vogella.com/tutorials/JavaRegularExpressions/article.html)
+The pattern is a regular expression. For more info about regular exp. and skip method : <a href="https://www.vogella.com/tutorials/JavaRegularExpressions/article.html">https://www.vogella.com/tutorials/JavaRegularExpressions/article.html</a>
 
 **In JavaIfElse Challenge,** HackerRank gives you a start code for scanner. There is a skip method with a pattern to ignore. I didn't know the meaning the pattern exactly.
 Pattern is : "(\r\n|[\n\r\u2028\u2029\u0085])?"
-I found an explanation for the pattern: [https://stackoverflow.com/questions/52111077/explain-this-line-written-in-java](https://stackoverflow.com/questions/52111077/explain-this-line-written-in-java)
+I found an explanation for the pattern: <a href="https://stackoverflow.com/questions/52111077/explain-this-line-written-in-java">https://stackoverflow.com/questions/52111077/explain-this-line-written-in-java</a>
 
 Eclipse has a problem with end-of-file. Normally, Ctrl-Z is ended line, and you can control it with scanner.hasNextLine().
 But in Eclipse, before Ctrl-Z you should click anywhere except console (I clicked editor) and click console again, now you can end with Ctrl-Z. :)
@@ -128,7 +128,7 @@ But in Eclipse, before Ctrl-Z you should click anywhere except console (I clicke
 - [0-5] means between 0 and 5
 - ^ tells the computer that the match must start at the beginning of the string or line.
 - $ tells the computer that the match must occur at the end of the string or before \n at the end of the line or string.
-- More: [https://www.geeksforgeeks.org/write-regular-expressions/](https://www.geeksforgeeks.org/write-regular-expressions/)
+- More: <a href="https://www.geeksforgeeks.org/write-regular-expressions/">https://www.geeksforgeeks.org/write-regular-expressions/</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

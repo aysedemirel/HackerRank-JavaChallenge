@@ -8,79 +8,45 @@ import java.util.Scanner;
  * print format: (a+2^0*b),(a+2^0*b+2^1*b)...(a+2^0*b+2^1*b+...+2^n-1*b)
  * </p>
  *
- * @param q,a,b,n
+ * @param t,a,b,n
  * @author aysedemirel
  */
 public class LoopsII {
 
-  private static final Scanner scannerIn = new Scanner(System.in);
-  private final int[] a = new int[500];
-  private final int[] b = new int[500];
-  private final int[] n = new int[500];
-  private int queryNumber;
 
-  public LoopsII() {
-    getNumbers();
-    printResults();
-  }
-
-  public static void main(String[] argh) {
-    new LoopsII();
-  }
-
-  private void getNumbers() {
-    getQueryNumberFromUser();
-    for (int i = 0; i < queryNumber; i++) {
-      getAfromUser(i);
-      getBfromUser(i);
-      getNfromUser(i);
+    public static void main(String[] argh) {
+        solutionOne();
     }
-    scannerIn.close();
-  }
 
-  private void getQueryNumberFromUser() {
-    queryNumber = scannerIn.nextInt();
-    while (queryNumber < 0 || queryNumber > 500) {
-      System.out.println("Please enter query number in the range: [0,500]");
-      queryNumber = scannerIn.nextInt();
-    }
-  }
-
-  private void getAfromUser(int i) {
-    a[i] = scannerIn.nextInt();
-    while (a[i] < 0 || a[i] > 50) {
-      System.out.println("Please enter a number in the range: [0,50]");
-      a[i] = scannerIn.nextInt();
-    }
-  }
-
-  private void getBfromUser(int i) {
-    b[i] = scannerIn.nextInt();
-    while (b[i] < 0 || b[i] > 50) {
-      System.out.println("Please enter a number in the range: [0,50]");
-      b[i] = scannerIn.nextInt();
-    }
-  }
-
-  private void getNfromUser(int i) {
-    n[i] = scannerIn.nextInt();
-    while (n[i] < 0 || n[i] > 15) {
-      System.out.println("Please enter a number in the range: [0,15]");
-      n[i] = scannerIn.nextInt();
-    }
-  }
-
-  private void printResults() {
-    for (int i = 0; i < queryNumber; i++) {
-      for (int j = 0; j < n[i]; j++) {
-        int result = a[i];
-        for (int k = 0; k <= j; k++) {
-          result += Math.pow(2, k) * b[i];
+    public static void solutionOne() {
+        Scanner in = new Scanner(System.in);
+        int t = in.nextInt();
+        for (int i = 0; i < t; i++) {
+            int a = in.nextInt();
+            int b = in.nextInt();
+            int n = in.nextInt();
+            int result = a;
+            for (int j = 0; j < n; j++) {
+                result += (int) (Math.pow(2, j) * b);
+                System.out.print(result + " ");
+            }
+            System.out.println();
         }
-        System.out.print(result + " ");
-      }
-      System.out.println();
+        in.close();
     }
-  }
 
+    public static void solutionTwo() {
+        Scanner in = new Scanner(System.in);
+        int t = in.nextInt();
+        for (int i = 0; i < t; i++) {
+            int a = in.nextInt();
+            int b = in.nextInt();
+            int n = in.nextInt();
+            for (int j = 0, k = 1, e = a + k * b; j < n; ++j, k *= 2, e += k * b) {
+                System.out.print(e + " ");
+            }
+            System.out.println();
+        }
+        in.close();
+    }
 }

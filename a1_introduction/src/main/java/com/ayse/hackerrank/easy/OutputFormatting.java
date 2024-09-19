@@ -14,43 +14,43 @@ import java.util.Scanner;
 public class OutputFormatting {
 
 
-  public static void main(String[] args) {
-    solutionTwo();
-  }
-
-  public static void solutionOne() {
-    Scanner sc = new Scanner(System.in);
-    System.out.println("================================");
-    for (int i = 0; i < 3; i++) {
-      String s1 = sc.next();
-      int x = sc.nextInt();
-      System.out.printf("%-15s%03d%n", s1, x);
+    public static void main(String[] args) {
+        solutionTwo();
     }
-    System.out.println("================================");
-  }
 
-  public static void solutionTwo() {
-    Scanner sc = new Scanner(System.in);
-    System.out.println("================================");
-    for (int i = 0; i < 3; i++) {
-      String s1 = sc.next();
-      int x = sc.nextInt();
-      String resultStr = s1;
-      for (int a = 0; a < (15 - s1.length()); a++) {
-        resultStr += " ";
-      }
-      String resultInt;
-      if (x >= 0 && x <= 9) {
-        resultInt = "00" + x;
-      } else if (x >= 10 && x <= 99) {
-        resultInt = "0" + x;
-      } else {
-        resultInt = String.valueOf(x);
-      }
-      System.out.println(resultStr + resultInt);
+    public static void solutionOne() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("================================");
+        for (int i = 0; i < 3; i++) {
+            String s1 = sc.next();
+            int x = sc.nextInt();
+            System.out.printf("%-15s%03d%n", s1, x);
+        }
+        System.out.println("================================");
     }
-    System.out.println("================================");
-  }
+
+    public static void solutionTwo() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("================================");
+        for (int i = 0; i < 3; i++) {
+            String s1 = sc.next();
+            int x = sc.nextInt();
+            String resultStr = s1;
+            for (int a = 0; a < (15 - s1.length()); a++) {
+                resultStr += " ";
+            }
+            String resultInt;
+            if (x >= 0 && x <= 9) {
+                resultInt = "00" + x;
+            } else if (x >= 10 && x <= 99) {
+                resultInt = "0" + x;
+            } else {
+                resultInt = String.valueOf(x);
+            }
+            System.out.println(resultStr + resultInt);
+        }
+        System.out.println("================================");
+    }
 
 
 }

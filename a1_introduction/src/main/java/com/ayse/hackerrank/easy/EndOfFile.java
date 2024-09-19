@@ -10,27 +10,27 @@ import java.util.Scanner;
  */
 public class EndOfFile {
 
-  private static Scanner scanner;
-  private final ArrayList<String> results;
+    private static Scanner scanner;
+    private final ArrayList<String> results;
 
-  public EndOfFile() {
-    results = new ArrayList<>();
-    getLinesFromUser();
-  }
-
-  public static void main(String[] args) {
-    new EndOfFile();
-  }
-
-  private void getLinesFromUser() {
-    scanner = new Scanner(System.in);
-    int i = 0;
-    while (scanner.hasNext()) {
-      i++;
-      results.add(i + " " + scanner.nextLine());
+    public EndOfFile() {
+        results = new ArrayList<>();
+        getLinesFromUser();
     }
-    for (String resultLines : results) {
-      System.out.println(resultLines);
+
+    public static void main(String[] args) {
+        new EndOfFile();
     }
-  }
+
+    private void getLinesFromUser() {
+        scanner = new Scanner(System.in);
+        int i = 0;
+        while (scanner.hasNext()) {
+            i++;
+            results.add(i + " " + scanner.nextLine());
+        }
+        for (String resultLines : results) {
+            System.out.println(resultLines);
+        }
+    }
 }

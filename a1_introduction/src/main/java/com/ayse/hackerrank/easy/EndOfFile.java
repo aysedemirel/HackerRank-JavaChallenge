@@ -1,6 +1,5 @@
 package com.ayse.hackerrank.easy;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -9,28 +8,16 @@ import java.util.Scanner;
  * @author aysedemirel
  */
 public class EndOfFile {
-
-    private static Scanner scanner;
-    private final ArrayList<String> results;
-
-    public EndOfFile() {
-        results = new ArrayList<>();
-        getLinesFromUser();
-    }
-
     public static void main(String[] args) {
-        new EndOfFile();
+        solutionOne();
     }
 
-    private void getLinesFromUser() {
-        scanner = new Scanner(System.in);
-        int i = 0;
+    public static void solutionOne() {
+        Scanner scanner = new Scanner(System.in);
+        int lineNum = 1;
         while (scanner.hasNext()) {
-            i++;
-            results.add(i + " " + scanner.nextLine());
-        }
-        for (String resultLines : results) {
-            System.out.println(resultLines);
+            System.out.println(lineNum + " " + scanner.nextLine());
+            lineNum++;
         }
     }
 }

@@ -9,28 +9,28 @@ import java.util.Scanner;
  */
 public class StringReverse {
 
-  private static final Scanner sc = new Scanner(System.in);
+    private static final Scanner sc = new Scanner(System.in);
 
-  public static void main(String[] args) {
-    String A = sc.next();
-    printResult(A);
-  }
-
-  private static void printResult(String A) {
-    if (A.equals(new String(getReverseString(A)))) {
-      System.out.println("Yes");
-    } else {
-      System.out.println("No");
+    public static void main(String[] args) {
+        String A = sc.next();
+        printResult(A);
     }
-  }
 
-  private static byte[] getReverseString(String A) {
-    byte[] str = A.getBytes();
-    byte[] reverseStr = new byte[str.length];
-    int lastIndex = str.length - 1;
-    for (int i = lastIndex; i >= 0; i--) {
-      reverseStr[lastIndex - i] = str[i];
+    private static void printResult(String A) {
+        if (A.equals(new String(getReverseString(A)))) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
     }
-    return reverseStr;
-  }
+
+    private static byte[] getReverseString(String A) {
+        byte[] str = A.getBytes();
+        byte[] reverseStr = new byte[str.length];
+        int lastIndex = str.length - 1;
+        for (int i = lastIndex; i >= 0; i--) {
+            reverseStr[lastIndex - i] = str[i];
+        }
+        return reverseStr;
+    }
 }

@@ -10,30 +10,30 @@ import java.util.Scanner;
  */
 public class SubstringComparisons {
 
-  public static String getSmallestAndLargest(String text, int seperatedIndex) {
-    int startIndex = 0;
-    String tempText = text.substring(startIndex, seperatedIndex);
-    String smallest = tempText;
-    String largest = tempText;
-    for (int i = seperatedIndex; i < text.length(); i++) {
-      tempText = tempText.substring(startIndex + 1, seperatedIndex) + text.charAt(i);
-      if (largest.compareTo(tempText) < 0) {
-        largest = tempText;
-      }
-      if (smallest.compareTo(tempText) > 0) {
-        smallest = tempText;
-      }
+    public static String getSmallestAndLargest(String text, int seperatedIndex) {
+        int startIndex = 0;
+        String tempText = text.substring(startIndex, seperatedIndex);
+        String smallest = tempText;
+        String largest = tempText;
+        for (int i = seperatedIndex; i < text.length(); i++) {
+            tempText = tempText.substring(startIndex + 1, seperatedIndex) + text.charAt(i);
+            if (largest.compareTo(tempText) < 0) {
+                largest = tempText;
+            }
+            if (smallest.compareTo(tempText) > 0) {
+                smallest = tempText;
+            }
+        }
+        return smallest + "\n" + largest;
     }
-    return smallest + "\n" + largest;
-  }
 
 
-  public static void main(String[] args) {
-    Scanner scan = new Scanner(System.in);
-    String s = scan.next();
-    int k = scan.nextInt();
-    scan.close();
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String s = scan.next();
+        int k = scan.nextInt();
+        scan.close();
 
-    System.out.println(getSmallestAndLargest(s, k));
-  }
+        System.out.println(getSmallestAndLargest(s, k));
+    }
 }

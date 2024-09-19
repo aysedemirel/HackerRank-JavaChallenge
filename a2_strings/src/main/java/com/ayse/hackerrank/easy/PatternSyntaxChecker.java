@@ -14,21 +14,21 @@ import java.util.regex.PatternSyntaxException;
  */
 public class PatternSyntaxChecker {
 
-  public static void main(String[] args) {
-    Scanner in = new Scanner(System.in);
-    int testCases = Integer.parseInt(in.nextLine());
-    String[] inputs = new String[testCases];
-    for (int i = 0; i < testCases; i++) {
-      inputs[i] = in.nextLine();
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int testCases = Integer.parseInt(in.nextLine());
+        String[] inputs = new String[testCases];
+        for (int i = 0; i < testCases; i++) {
+            inputs[i] = in.nextLine();
+        }
+        for (int i = 0; i < testCases; i++) {
+            try {
+                Pattern.compile(inputs[i]);
+                System.out.println("Valid");
+            } catch (PatternSyntaxException e) {
+                System.out.println("Invalid");
+            }
+        }
+        in.close();
     }
-    for (int i = 0; i < testCases; i++) {
-      try {
-        Pattern.compile(inputs[i]);
-        System.out.println("Valid");
-      } catch (PatternSyntaxException e) {
-        System.out.println("Invalid");
-      }
-    }
-    in.close();
-  }
 }

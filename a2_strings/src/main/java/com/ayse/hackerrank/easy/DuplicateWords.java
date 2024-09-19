@@ -15,36 +15,36 @@ import java.util.regex.Pattern;
  */
 public class DuplicateWords {
 
-  public static void main(String[] args) {
+    public static void main(String[] args) {
 
-    /*
-     * \b : Start of a word boundary
-     *
-     * \w+ : Any number of word characters
-     *
-     * (\s+\1\b)* : Any number of space followed by word which matches the previous word and ends
-     * the word boundary. Whole thing wrapped in * helps to find more than one repetitions.
-     */
-    String regex = "\\b(\\w+)(\\s+\\1\\b)*";
-    Pattern p = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
+        /*
+         * \b : Start of a word boundary
+         *
+         * \w+ : Any number of word characters
+         *
+         * (\s+\1\b)* : Any number of space followed by word which matches the previous word and ends
+         * the word boundary. Whole thing wrapped in * helps to find more than one repetitions.
+         */
+        String regex = "\\b(\\w+)(\\s+\\1\\b)*";
+        Pattern p = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
 
-    Scanner in = new Scanner(System.in);
-    int numSentences = Integer.parseInt(in.nextLine());
+        Scanner in = new Scanner(System.in);
+        int numSentences = Integer.parseInt(in.nextLine());
 
-    while (numSentences-- > 0) {
-      String input = in.nextLine();
+        while (numSentences-- > 0) {
+            String input = in.nextLine();
 
-      Matcher m = p.matcher(input);
+            Matcher m = p.matcher(input);
 
-      // Check for subsequences of input that match the compiled pattern
-      while (m.find()) {
-        input = input.replaceAll(m.group(0), m.group(1));
-      }
+            // Check for subsequences of input that match the compiled pattern
+            while (m.find()) {
+                input = input.replaceAll(m.group(0), m.group(1));
+            }
 
-      // Prints the modified sentence.
-      System.out.println(input);
+            // Prints the modified sentence.
+            System.out.println(input);
+        }
+
+        in.close();
     }
-
-    in.close();
-  }
 }

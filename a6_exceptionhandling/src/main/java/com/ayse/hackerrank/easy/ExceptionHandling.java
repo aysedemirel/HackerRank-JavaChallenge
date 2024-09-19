@@ -42,34 +42,34 @@ import java.util.Scanner;
  */
 public class ExceptionHandling {
 
-  public static void main(String[] args) {
-    final ExceptionHandling sample = new ExceptionHandling();
-    final Scanner in = new Scanner(System.in);
-    while (in.hasNextInt()) {
-      int n = in.nextInt();
-      int p = in.nextInt();
+    public static void main(String[] args) {
+        final ExceptionHandling sample = new ExceptionHandling();
+        final Scanner in = new Scanner(System.in);
+        while (in.hasNextInt()) {
+            int n = in.nextInt();
+            int p = in.nextInt();
 
-      try {
-        System.out.println(sample.power(n, p));
-      } catch (Exception e) {
-        System.out.println(e);
-      }
-    }
-  }
-
-  public int power(int n, int p) throws Exception {
-    if (n < 0 || p < 0) {
-      throw new Exception("n or p should not be negative.");
-    }
-    if (n == 0 && p == 0) {
-      throw new Exception("n and p should not be zero.");
+            try {
+                System.out.println(sample.power(n, p));
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+        }
     }
 
-    int result = 1;
+    public int power(int n, int p) throws Exception {
+        if (n < 0 || p < 0) {
+            throw new Exception("n or p should not be negative.");
+        }
+        if (n == 0 && p == 0) {
+            throw new Exception("n and p should not be zero.");
+        }
 
-    for (int i = 0; i < p; i++) {
-      result *= n;
+        int result = 1;
+
+        for (int i = 0; i < p; i++) {
+            result *= n;
+        }
+        return result;
     }
-    return result;
-  }
 }

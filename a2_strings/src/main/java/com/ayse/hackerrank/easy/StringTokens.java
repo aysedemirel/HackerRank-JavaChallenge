@@ -12,25 +12,25 @@ import java.util.regex.Pattern;
  */
 public class StringTokens {
 
-  private static final String SPLIT_REGEX = "[ !,?._'@]+";
-  private static final String VALID_REGEX = "[A-Za-z !,?._'@]+";
+    private static final String SPLIT_REGEX = "[ !,?._'@]+";
+    private static final String VALID_REGEX = "[A-Za-z !,?._'@]+";
 
-  public static void main(String[] args) {
-    Scanner scan = new Scanner(System.in);
-    String s = scan.nextLine();
-    s = s.trim();
-    boolean isInputValid = s.matches(VALID_REGEX);
-    boolean isLengthValid = (s.length() >= 1) && (s.length() <= 400000);
-    if (isInputValid && isLengthValid) {
-      Pattern pattern = Pattern.compile(SPLIT_REGEX);
-      String[] split = pattern.split(s);
-      System.out.println(split.length);
-      for (String string : split) {
-        System.out.println(string);
-      }
-    } else {
-      System.out.println("0");
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String s = scan.nextLine();
+        s = s.trim();
+        boolean isInputValid = s.matches(VALID_REGEX);
+        boolean isLengthValid = (s.length() >= 1) && (s.length() <= 400000);
+        if (isInputValid && isLengthValid) {
+            Pattern pattern = Pattern.compile(SPLIT_REGEX);
+            String[] split = pattern.split(s);
+            System.out.println(split.length);
+            for (String string : split) {
+                System.out.println(string);
+            }
+        } else {
+            System.out.println("0");
+        }
+        scan.close();
     }
-    scan.close();
-  }
 }

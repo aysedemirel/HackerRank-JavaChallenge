@@ -16,22 +16,22 @@ package com.ayse.hackerrank.easy;
  */
 public class JavaGenerics {
 
-  public static void main(String[] args) {
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
-    Printer<Integer> myPrinter = new Printer<>();
-    Printer<String> strPrinter = new Printer<>();
-    Integer[] intArray = {1, 2, 3};
-    String[] stringArray = {"Hello", "World"};
-    myPrinter.printArray(intArray);
-    strPrinter.printArray(stringArray);
-  }
-
-  static class Printer<T> {
-
-    public void printArray(T[] arr) {
-      for (T t : arr) {
-        System.out.println(t);
-      }
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Printer<Integer> myPrinter = new Printer<>();
+        Printer<String> strPrinter = new Printer<>();
+        Integer[] intArray = {1, 2, 3};
+        String[] stringArray = {"Hello", "World"};
+        myPrinter.printArray(intArray);
+        strPrinter.printArray(stringArray);
     }
-  }
+
+    static class Printer<T> {
+
+        public void printArray(T[] arr) {
+            for (T t : arr) {
+                System.out.println(t);
+            }
+        }
+    }
 }

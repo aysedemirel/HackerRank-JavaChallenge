@@ -15,18 +15,18 @@ import java.util.Scanner;
  */
 public class BigIntegerNumbers {
 
-  private static final Scanner scanner = new Scanner(System.in);
+    private static final Scanner scanner = new Scanner(System.in);
 
-  public static void main(String[] args) {
+    public static void main(String[] args) {
 
-    while (scanner.hasNext()) {
-      BigInteger a = scanner.nextBigInteger();
-      BigInteger b = scanner.nextBigInteger();
-      BigInteger a_add_b = a.add(b);
-      BigInteger a_mult_b = a.multiply(b);
-      System.out.println(a_add_b);
-      System.out.println(a_mult_b);
+        while (scanner.hasNext()) {
+            BigInteger a = scanner.nextBigInteger();
+            BigInteger b = scanner.nextBigInteger();
+            BigInteger a_add_b = a.add(b);
+            BigInteger a_mult_b = a.multiply(b);
+            System.out.println(a_add_b);
+            System.out.println(a_mult_b);
+        }
+        scanner.close();
     }
-    scanner.close();
-  }
 }

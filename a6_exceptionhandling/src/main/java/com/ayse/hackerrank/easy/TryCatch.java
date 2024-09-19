@@ -20,16 +20,16 @@ import java.util.Scanner;
  */
 public class TryCatch {
 
-  public static void main(String[] args) {
-    try (Scanner scanner = new Scanner(System.in)) {
-      int x = scanner.nextInt();
-      int y = scanner.nextInt();
-      int result = x / y;
-      System.out.println(result);
-    } catch (InputMismatchException e) {
-      System.out.println("java.util.InputMismatchException");
-    } catch (ArithmeticException e) {
-      System.out.println("java.lang.ArithmeticException: / by zero");
+    public static void main(String[] args) {
+        try (Scanner scanner = new Scanner(System.in)) {
+            int x = scanner.nextInt();
+            int y = scanner.nextInt();
+            int result = x / y;
+            System.out.println(result);
+        } catch (InputMismatchException e) {
+            System.out.println("java.util.InputMismatchException");
+        } catch (ArithmeticException e) {
+            System.out.println("java.lang.ArithmeticException: / by zero");
+        }
     }
-  }
 }

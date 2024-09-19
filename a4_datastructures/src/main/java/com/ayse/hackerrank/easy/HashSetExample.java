@@ -29,16 +29,16 @@ import java.util.Scanner;
  */
 public class HashSetExample {
 
-  public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
-    int size = scanner.nextInt();
-    HashSet<String> ts = new HashSet<>();
-    for (int i = 0; i < size; i++) {
-      String first = scanner.next();
-      String second = scanner.next();
-      ts.add(first + " " + second);
-      System.out.println(ts.size());
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int size = scanner.nextInt();
+        HashSet<String> ts = new HashSet<>();
+        for (int i = 0; i < size; i++) {
+            String first = scanner.next();
+            String second = scanner.next();
+            ts.add(first + " " + second);
+            System.out.println(ts.size());
+        }
     }
-  }
 
 }

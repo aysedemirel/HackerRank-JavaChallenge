@@ -19,7 +19,14 @@ public class IntToString {
             Scanner in = new Scanner(System.in);
             int n = in.nextInt();
             in.close();
-            String s = "" + n;
+            // starting of the solution
+            // You can choose one of the solutions
+
+            // String s = "" + n;
+            // String s = Integer.toString(n);
+            String s = String.valueOf(n);
+
+            // ending of the solution
             if (n == Integer.parseInt(s)) {
                 System.out.println("Good job");
             } else {
@@ -32,7 +39,7 @@ public class IntToString {
 }
 
 
-// The following class will prevent you from terminating the code using exit(0)!
+//The following class will prevent you from terminating the code using exit(0)!
 class DoNotTerminate {
 
     public static void forbidExit() {

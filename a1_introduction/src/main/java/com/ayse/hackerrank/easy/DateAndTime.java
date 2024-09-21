@@ -2,6 +2,8 @@ package com.ayse.hackerrank.easy;
 
 import java.io.*;
 import java.time.LocalDate;
+import java.util.Calendar;
+import java.util.Locale;
 
 /**
  * Input example: 02 08 2020 </br> Output: SATURDAY </br>
@@ -18,8 +20,23 @@ class Result {
      * The function is expected to return a STRING. The function accepts following parameters: 1.
      * INTEGER month 2. INTEGER day 3. INTEGER year
      */
-    // LocalDate is for java 8
+    // Solution with Calendar
     public static String findDay(int month, int day, int year) {
+        Calendar calendar = Calendar.getInstance();
+
+        calendar.set(Calendar.DAY_OF_MONTH, day);
+        // Month is 0-based in Calendar, so subtract 1
+        calendar.set(Calendar.MONTH, month - 1);
+        calendar.set(Calendar.YEAR, year);
+
+        // or you can set all of them directly
+        //calendar.set(year, month - 1, day);
+
+        return calendar.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.ENGLISH).toUpperCase();
+    }
+
+    // Solution with LocalDate
+    public static String findDayByLocalDate(int month, int day, int year) {
         LocalDate localDate = LocalDate.of(year, month, day);
         return localDate.getDayOfWeek().toString();
     }

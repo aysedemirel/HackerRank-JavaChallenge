@@ -128,7 +128,7 @@ How to run the project:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ROADMAP -->
+<!-- KEY TAKEAWAYS -->
 
 ## Key Takeaways
 
@@ -173,6 +173,8 @@ You can access my detailed write-ups and step-by-step solutions for all the prob
 - English articles (coming soon)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ROADMAP -->
 
 ## Roadmap
 

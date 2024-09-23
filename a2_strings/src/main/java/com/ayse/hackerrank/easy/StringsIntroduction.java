@@ -11,29 +11,23 @@ import java.util.Scanner;
  */
 public class StringsIntroduction {
 
-    private static final Scanner sc = new Scanner(System.in);
-
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         String A = sc.next();
         String B = sc.next();
         sc.close();
         System.out.println(A.length() + B.length());
-        printLexicographically(A, B);
-        System.out.println(A.substring(0, 1).toUpperCase() + A.substring(1) + " "
-                + B.substring(0, 1).toUpperCase() + B.substring(1));
+        System.out.println(getLexicographically(A, B));
+        System.out.println(capitalize(A) + " " + capitalize(B));
     }
 
-    private static void printLexicographically(String A, String B) {
-        int compareLexicographically = A.compareTo(B);
-        if (compareLexicographically > 0) {
-            // A >B
-            System.out.println("Yes");
-        } else if (compareLexicographically == 0) {
-            // A == B
-            System.out.println("No");
-        } else {
-            // A<B
-            System.out.println("No");
-        }
+    private static String getLexicographically(String A, String B) {
+        return A.compareTo(B) > 0 ? "Yes" : "No";
+    }
+
+    public static String capitalize(String str) {
+        return (str == null || str.length() <= 1) ?
+                str :
+                str.substring(0, 1).toUpperCase() + str.substring(1);
     }
 }

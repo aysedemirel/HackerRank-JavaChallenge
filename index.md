@@ -34,7 +34,7 @@
         <li><a href="#executing-program">Executing Program</a></li>
       </ul>
     </li>
-    <li><a href="#what-i-learned">What I learned</a></li>
+    <li><a href="#key-takeaways">Key Takeaways</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -104,33 +104,54 @@ How to run the project:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ROADMAP -->
 
-## What I Learned 
+<!-- KEY TAKEAWAYS -->
+
+## Key Takeaways
 
 ### Introduction
-**About Scanner:** skip method is ignoring the pattern what you want. You want a String input, and don't want some characters, you can use skip method.
-The pattern is a regular expression. For more info about regular exp. and skip method : <a href="https://www.vogella.com/tutorials/JavaRegularExpressions/article.html">https://www.vogella.com/tutorials/JavaRegularExpressions/article.html</a>
 
-**In JavaIfElse Challenge,** HackerRank gives you a start code for scanner. There is a skip method with a pattern to ignore. I didn't know the meaning the pattern exactly.
-Pattern is : "(\r\n|[\n\r\u2028\u2029\u0085])?"
-I found an explanation for the pattern: <a href="https://stackoverflow.com/questions/52111077/explain-this-line-written-in-java">https://stackoverflow.com/questions/52111077/explain-this-line-written-in-java</a>
+**Scanner's `skip` Method:**
+The `skip` method in Java's `Scanner` class allows you to skip specific patterns defined by regular expressions.
+It's useful when you need to filter out certain unwanted characters from a `String` input.
+For more details on the `skip` method and regular expressions, refer
+to [GeeksforGeeks](https://www.geeksforgeeks.org/scanner-skip-method-in-java-with-examples/).
 
-Eclipse has a problem with end-of-file. Normally, Ctrl-Z is ended line, and you can control it with scanner.hasNextLine().
-But in Eclipse, before Ctrl-Z you should click anywhere except console (I clicked editor) and click console again, now you can end with Ctrl-Z. :)
+**HackerRank's Java If-Else Challenge:**
+The provided starter code for the `Scanner` includes a `skip` method with the following
+pattern: `(\r\n|[\n\r\u2028\u2029\u0085])`?.
+This pattern is used to handle various line-ending characters.
+For an in-depth explanation, check
+out [this Stack Overflow post](https://stackoverflow.com/questions/52111077/explain-this-line-written-in-java).
 
-### Strings
-**Regex**
+**Eclipse End-of-File Issue:**
+When using Eclipse, handling the end-of-file (EOF) with `scanner.hasNextLine()` can be tricky.
+The `Ctrl + Z` shortcut is used to indicate EOF, but you need to click outside the console (e.g., on the editor) and
+then
+back into the console for it to work properly.
 
-- \d represents digits in regular expressions, same as [0-9]
-- \d{1, 2} catches any one or two-digit number
-- (0|1) means zero or one
-- [0-5] means between 0 and 5
-- ^ tells the computer that the match must start at the beginning of the string or line.
-- $ tells the computer that the match must occur at the end of the string or before \n at the end of the line or string.
-- More: <a href="https://www.geeksforgeeks.org/write-regular-expressions/">https://www.geeksforgeeks.org/write-regular-expressions/</a>
+### Strings and Regular Expressions
+
+**Regex Basics:**
+
+- `\d`: Represents any digit (equivalent to `[0-9]`).
+- `\d{1,2}`: Matches any one or two-digit number.
+- `(0|1)`: Matches either `0` or `1`.
+- `[0-5]`: Matches any single digit between `0` and `5`.
+- `^`: Asserts that the match must start at the beginning of the string or line.
+- `$`: Ensures that the match must occur at the end of the string or just before `\n`.
+
+**For More Information:** Further reading on regular expressions can be found
+at [GeeksforGeeks](https://www.geeksforgeeks.org/write-regular-expressions/).
+
+You can access my detailed write-ups and step-by-step solutions for all the problems through the following links:
+
+- [Turkish articles](https://medium.com/@aysedemirel/hackerrank-java-challenge-0bce4a52707a)
+- English articles (coming soon)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ROADMAP -->
 
 ## Roadmap
 

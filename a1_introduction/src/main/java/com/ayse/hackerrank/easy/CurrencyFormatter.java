@@ -12,19 +12,23 @@ import java.util.Scanner;
  */
 public class CurrencyFormatter {
 
-    private static final Locale INDIA_LOCALE = new Locale("en", "IN");
-    private static final NumberFormat INDIA = NumberFormat.getCurrencyInstance(INDIA_LOCALE);
-    private static final NumberFormat US = NumberFormat.getCurrencyInstance(Locale.US);
-    private static final NumberFormat CHINA = NumberFormat.getCurrencyInstance(Locale.CHINA);
-    private static final NumberFormat FRANCE = NumberFormat.getCurrencyInstance(Locale.FRANCE);
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         double payment = scanner.nextDouble();
         scanner.close();
-        System.out.println("US: " + US.format(payment));
-        System.out.println("India: " + INDIA.format(payment));
-        System.out.println("China: " + CHINA.format(payment));
-        System.out.println("France: " + FRANCE.format(payment));
+
+        final Locale indiaLocale = Locale.of("en", "IN");
+        // for before Java 19
+        // final Locale indiaLocale = new Locale("en", "IN");
+
+        String us = NumberFormat.getCurrencyInstance(Locale.US).format(payment);
+        String india = NumberFormat.getCurrencyInstance(indiaLocale).format(payment);
+        String china = NumberFormat.getCurrencyInstance(Locale.CHINA).format(payment);
+        String france = NumberFormat.getCurrencyInstance(Locale.FRANCE).format(payment);
+
+        System.out.println("US: " + us);
+        System.out.println("India: " + india);
+        System.out.println("China: " + china);
+        System.out.println("France: " + france);
     }
 }

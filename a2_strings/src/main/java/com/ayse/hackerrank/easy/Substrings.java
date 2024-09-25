@@ -3,7 +3,7 @@ package com.ayse.hackerrank.easy;
 import java.util.Scanner;
 
 /**
- * Find sub string with inputs from user.
+ * Find substring with inputs from user.
  *
  * @author aysedemirel
  */
@@ -16,7 +16,6 @@ public class Substrings {
         String S = in.next();
         int start = in.nextInt();
         int end = in.nextInt();
-
         System.out.println(S.substring(start, end));
     }
 }

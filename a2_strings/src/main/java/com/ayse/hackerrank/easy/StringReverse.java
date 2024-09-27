@@ -9,28 +9,68 @@ import java.util.Scanner;
  */
 public class StringReverse {
 
-    private static final Scanner sc = new Scanner(System.in);
-
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         String A = sc.next();
-        printResult(A);
+        solutionOne(A);
     }
 
-    private static void printResult(String A) {
-        if (A.equals(new String(getReverseString(A)))) {
+    private static void solutionOne(String A) {
+        char[] reverse = new char[A.length()];
+        for (int i = 0; i < A.length(); i++) {
+            reverse[i] = A.charAt(A.length() - 1 - i);
+        }
+        if (new String(reverse).equals(A)) {
             System.out.println("Yes");
         } else {
             System.out.println("No");
         }
     }
 
-    private static byte[] getReverseString(String A) {
+    private static void solutionTwo(String A) {
+        for (int i = 0; i < A.length() / 2; i++) {
+            if (A.charAt(i) != A.charAt(A.length() - 1 - i)) {
+                System.out.println("No");
+                return;
+            }
+        }
+        System.out.println("Yes");
+    }
+
+    private static void solutionThree(String A) {
+        StringBuilder sb = new StringBuilder(A);
+        String reversed = sb.reverse().toString();
+        if (A.equals(reversed)) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
+    }
+
+    private static void solutionFour(String A) {
+        int left = 0;
+        int right = A.length() - 1;
+        while (left < right) {
+            if (A.charAt(left) != A.charAt(right)) {
+                System.out.println("No");
+                return;
+            }
+            left++;
+            right--;
+        }
+        System.out.println("Yes");
+    }
+
+    private static void solutionFive(String A) {
         byte[] str = A.getBytes();
-        byte[] reverseStr = new byte[str.length];
+        byte[] reverse = new byte[str.length];
         int lastIndex = str.length - 1;
         for (int i = lastIndex; i >= 0; i--) {
-            reverseStr[lastIndex - i] = str[i];
+            reverse[lastIndex - i] = str[i];
         }
-        return reverseStr;
+        String result = A.equals(new String(reverse)) ? "Yes" : "No";
+        System.out.println(result);
     }
+
+
 }

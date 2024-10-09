@@ -1,28 +1,74 @@
 package com.ayse.hackerrank.easy;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
+/**
+ * Two strings contain all the same letters in the same frequencies, print "Anagrams".
+ * Otherwise, print "Not Anagrams".
+ *
+ * @author aysedemirel
+ */
 public class Anagrams {
 
-    static boolean isAnagramWithArrays(String a, String b) {
-        // The way is not accepted from Hackerrank
-        char[] strA = a.toCharArray();
-        char[] strB = b.toCharArray();
+
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        String a = scan.next();
+        String b = scan.next();
+        scan.close();
+        boolean ret = solutionThree(a, b);
+        System.out.println((ret) ? "Anagrams" : "Not Anagrams");
+    }
+
+    private static boolean solutionOne(String a, String b) {
+        if (a.length() != b.length()) {
+            return false;
+        }
+        a = a.toLowerCase();
+        b = b.toLowerCase();
+        int[] arr = new int[26];
+        for (int i = 0; i < a.length(); i++) {
+            arr[a.charAt(i) - 'a']++;
+            arr[b.charAt(i) - 'a']--;
+        }
+        for (int i = 0; i < 26; i++) {
+            if (arr[i] != 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private static boolean solutionTwo(String a, String b) {
+        if (a.length() != b.length()) {
+            return false;
+        }
+        Map<Character, Integer> characters = new HashMap<>();
+        for (char c : a.toLowerCase().toCharArray()) {
+            characters.put(c, characters.getOrDefault(c, 0) + 1);
+        }
+        for (char c : b.toLowerCase().toCharArray()) {
+            if (!characters.containsKey(c) || characters.get(c) == 0) {
+                return false;
+            }
+            characters.put(c, characters.get(c) - 1);
+        }
+        return true;
+    }
+
+    private static boolean solutionThree(String a, String b) {
+        if (a.length() != b.length()) {
+            return false;
+        }
+        char[] strA = a.toLowerCase().toCharArray();
+        char[] strB = b.toLowerCase().toCharArray();
         Arrays.sort(strA);
         Arrays.sort(strB);
 
-        return Arrays.equals(strA, strB);
-    }
-
-    static boolean isAnagram(String a, String b) {
-        char[] strA = a.toLowerCase().toCharArray();
-        char[] strB = b.toLowerCase().toCharArray();
-        sort(strA, 0, strA.length - 1);
-        sort(strB, 0, strB.length - 1);
-        if (strA.length != strB.length) {
-            return false;
-        }
         for (int i = 0; i < strA.length; i++) {
             String A = strA[i] + "";
             String B = strB[i] + "";
@@ -33,50 +79,17 @@ public class Anagrams {
         return true;
     }
 
-    static void sort(char[] arr, int low, int high) {
-        if (low < high) {
-            /*
-             * pi is partitioning index, arr[pi] is now at right place
-             */
-            int pi = partition(arr, low, high);
-
-            // Recursively sort elements before
-            // partition and after partition
-            sort(arr, low, pi - 1);
-            sort(arr, pi + 1, high);
+    private static boolean solutionFour(String a, String b) {
+        if (a.length() != b.length()) {
+            return false;
         }
-    }
-
-    static int partition(char[] arr, int low, int high) {
-        int pivot = arr[high];
-        int i = (low - 1); // index of smaller element
-        for (int j = low; j < high; j++) {
-            // If current element is smaller than the pivot
-            if (arr[j] < pivot) {
-                i++;
-
-                // swap arr[i] and arr[j]
-                char temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
-            }
+        a = a.toLowerCase();
+        b = b.toLowerCase();
+        if (a.isEmpty() && b.isEmpty())
+            return true;
+        else {
+            char c = a.charAt(0);
+            return b.contains(String.valueOf(c)) && solutionFour(a.substring(1), b.replaceFirst(String.valueOf(c), ""));
         }
-
-        // swap arr[i+1] and arr[high] (or pivot)
-        char temp = arr[i + 1];
-        arr[i + 1] = arr[high];
-        arr[high] = temp;
-
-        return i + 1;
-    }
-
-    public static void main(String[] args) {
-
-        Scanner scan = new Scanner(System.in);
-        String a = scan.next();
-        String b = scan.next();
-        scan.close();
-        boolean ret = isAnagram(a, b);
-        System.out.println((ret) ? "Anagrams" : "Not Anagrams");
     }
 }
